@@ -1,0 +1,118 @@
+General 
+1880
+Buildings don't just pop into existence, must be gradually built.
+Resources allocated on building placement click, returned on cancel before completion.
+Resources
+         Tier 1
+                Food, Water, Wood, Metals
+         Tier 2
+                Alcohol, Nails, Horseshoes, Wood carts (transport), Furs, Rope(s)
+         Tier 3
+               Gold, Guns, Ammo
+Threats
+         Weather
+                   - Seasonal Temperatures
+                              - Sod = good insulation, low joy
+                              - Wood + sod = good insulation, medium joy
+                              - Wood + nails = decent insulation, good joy
+                    - Storms, tornadoes, drought
+         Outlaws
+                   - Cattle rustlers
+                   - Horse rustlers
+                   - Thieves (can hit general store, banks and storehouse?)
+         Public discontent
+                   - Public may rise up against you as mayor if you suck!
+         
+         If Deadwood map
+                   - Lakota Tribe native americans
+Stretch Goals
+        - Take control of lawmen (warband) to prevent robberies?
+        - Take control of outlaws (warband) to carry out theft on your own town ? (very naughty).
+        - Public perception of you as leader/ mayor? Similar to hope/discontent from frostpunk?
+
+Additional Ideas
+
+Buildings
+Storehouse
+      - 2 upgrades
+House
+      - 4 upgrades
+             - SOD (turf) shack, wood shack, bunkhouse, house, mansion
+Well
+      - Water, - AoE houses must be within to get water.
+            - Upgrade to windmill reservoir
+Lumberjack's huts
+       - 1 upgrade 
+             - Lumber Yard
+Farms
+       - shack / house etc. - Placed with allocated land
+              - 2 upgrades
+                      - Extra land
+                      - Mules/ oxen land tillers
+         - Crops 
+                - Corn?
+                - Wheat?
+                - Cotton?
+          - Animals
+                 - Cows?
+                 - Sheep?
+Ranches
+        - shack / house etc - Placed with allocated land
+                - 2 upgrades
+                        - Extra land
+                        - Extra security (horse thieves) / Workers allocation
+Trade Post
+          - 2 Upgrades
+                      - Trading house
+                      - Trading Depot
+General Store
+           - 1 Upgrade
+                       - Large general store
+           - Distributes food - AoE houses again.
+Gun Store
+           - 1 upgrade
+                       - Larger variety of weapons
+                       - Required for advancing law enforcement
+Inn
+           - 2 upgrades
+                        - Tavern (lawful) - Larger, greater lawful joy increase
+                        OR
+                        - Tavern (lawless) - Larger, greater unlawful increase
+Sheriff's Office
+             - 2 upgrades
+                        - Jail house
+                        - Prison (Unlocked additional building)
+              - Can choose to pay more (daily) for increased lawfulness
+                          - Increases worker capacity
+                          - lowers likelihood of outlaws visiting?
+Foreman's shack (sod or wood)
+              - 2 upgrades
+                         - Miner's shacks - more workers at mine
+                         - Advanced Mine - uses carts etc.
+
+Hunters Shack (sod)
+             - Produces meat / skins
+             - 1 Upgrade
+                        - Hunter's hut (wood + nails)
+
+Tanners
+              - Produces furs/ leather from local animals
+
+Clothiers
+             - Produces clothing from furs/leather/cotton
+                    Tier 1
+                            - Cotton or Furs only
+                    Tier 2
+                             - furs/cotton + leather
+
+Brothel
+           - Can be lawful or lawless, depending on city?
+
+Chapel
+          - 2 Upgrades
+                    - Church
+                    - Cathedral
+
+Railway Station
+         - Increases trade revenue
+         - Increases population growth
