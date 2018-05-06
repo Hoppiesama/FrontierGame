@@ -5,8 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - CamOriginPoint
-  - StoreHouse
   - CameraHolster
+  - GameStats
+  - Resident
   layers:
   - Default
   - TransparentFX
