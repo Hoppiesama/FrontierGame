@@ -35,7 +35,7 @@ public class ResourceStack : MonoBehaviour {
         if (placedOnFloor)
         {
             transform.parent = null;
-            Physics.Raycast(location, Vector3.down, out hit, 10.0f)
+            if (Physics.Raycast(location, Vector3.down, out hit))
             {
                 transform.position = hit.point;
             }

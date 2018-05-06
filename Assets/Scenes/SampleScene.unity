@@ -283,6 +283,8 @@ MonoBehaviour:
   offsetHeight: 0
   moveSpeed: 8
   rotationSpeed: 4
+  mouseScrollingEnabled: 1
+  percentageOfScreenOffset: 0.0099
 --- !u!20 &282840813
 Camera:
   m_ObjectHideFlags: 0

@@ -37,11 +37,24 @@ public class CameraController : MonoBehaviour {
     private float moveStep = 0.0f;
     private float rotStep = 0.0f;
 
+
+
     //Input variables
+    //WASD
     private float inputHorizontal = 0.0f;
     private float inputVertical = 0.0f;
+    //QE
     private bool inputRotateLeft = false;
     private bool inputRotateRight = false;
+    //MouseScroll
+    public bool mouseScrollingEnabled = false;
+    [Range (0.0f, 0.1f)]
+    public float percentageOfScreenOffset = 0.0f;
+    private int widthBoundary = 0; // distance from edge scrolling starts
+    private int heightBoundary = 0;
+    private int screenWidth = Screen.width;
+    private int screenHeight = Screen.height;
+
     private Vector3 inputVector = Vector3.zero;
 
     //Origin point
@@ -59,6 +72,9 @@ public class CameraController : MonoBehaviour {
         offsetDistance = startOffsetDistance;
         offsetHeight = startOffsetHeight;
 
+        //Determine boundaries
+        widthBoundary = (int)(screenWidth * percentageOfScreenOffset);
+        heightBoundary = (int)(screenHeight * percentageOfScreenOffset);
 
         offset = new Vector3(camOrigin.transform.position.x, camOrigin.transform.position.y + offsetHeight, camOrigin.transform.position.z - offsetDistance);
 
@@ -197,6 +213,27 @@ public class CameraController : MonoBehaviour {
         inputVertical = Input.GetAxis("Vertical");
         inputRotateLeft = Input.GetButton("RotateCamLeft");
         inputRotateRight = Input.GetButton("RotateCamRight");
+
+        if (mouseScrollingEnabled)
+        {
+            if ((Input.mousePosition.x > screenWidth - widthBoundary) && inputHorizontal == 0.0f)
+            {
+                inputHorizontal = 1.0f;
+            }
+            if ((Input.mousePosition.x < 0 + widthBoundary) && inputHorizontal == 0.0f)
+            {
+                inputHorizontal = -1.0f;
+            }
+            if ((Input.mousePosition.y > screenHeight - heightBoundary) && inputVertical == 0.0f)
+            {
+                inputVertical = 1.0f;
+            }
+            if ((Input.mousePosition.y < 0 + heightBoundary) && inputVertical == 0.0f)
+            {
+                inputVertical = -1.0f;
+            }
+        }
+        
     }
 
 
