@@ -101,8 +101,8 @@ public class CameraController : MonoBehaviour {
 
     void LateUpdate()
     {
-        moveStep = moveSpeed * Time.deltaTime;
-        rotStep = rotationSpeed * Time.deltaTime;
+        moveStep = moveSpeed * Time.unscaledDeltaTime;
+        rotStep = rotationSpeed * Time.unscaledDeltaTime;
 
         //Process inputs
         GetInputs();
@@ -132,7 +132,7 @@ public class CameraController : MonoBehaviour {
         Quaternion targetRotation = Quaternion.LookRotation(camOrigin.transform.position - camHolster.transform.position);
         this.transform.localRotation = Quaternion.Slerp(transform.rotation, targetRotation, rotStep * 4.0f);
 
-        Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, targetFOV, zoomSpeed * Time.deltaTime);
+        Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, targetFOV, zoomSpeed * Time.unscaledDeltaTime);
         offset.y = Mathf.Lerp(offset.y, targetOffsetY, moveStep * 0.5f);
     }
 
@@ -197,13 +197,13 @@ public class CameraController : MonoBehaviour {
     {
         if (inputVector != Vector3.zero)
         {
-            camOrigin.transform.position = Vector3.Lerp(camOrigin.transform.position, camOrigin.transform.position + ( inputVector), moveSpeed * Time.deltaTime) ;
+            camOrigin.transform.position = Vector3.Lerp(camOrigin.transform.position, camOrigin.transform.position + ( inputVector), moveSpeed * Time.unscaledDeltaTime) ;
             camHolster.transform.position = camOrigin.transform.position + offset;
 
             Vector3 testing1 = camHolster.transform.position;
             testing1.y = camOrigin.transform.position.y;
 
-            Debug.Log("Distance: " + Vector3.Distance(testing1, camOrigin.transform.position));
+        //    Debug.Log("Distance: " + Vector3.Distance(testing1, camOrigin.transform.position));
         }
     }
 

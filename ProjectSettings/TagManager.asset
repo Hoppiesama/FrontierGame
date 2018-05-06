@@ -8,6 +8,9 @@ TagManager:
   - CameraHolster
   - GameStats
   - Resident
+  - Character
+  - TimeController
+  - Residence
   layers:
   - Default
   - TransparentFX
