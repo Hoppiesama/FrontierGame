@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Resource
+{
+    VEGETABLE = 0,
+    MEAT,
+    WATER,
+    WOOD,
+    NAILS,
+
+};
+
 public class Storehouse : MonoBehaviour {
 
-    public enum Resource
-    {
-      VEGETABLE =0,
-      MEAT,
-      WATER,
-      WOOD,
-      NAILS,
 
-    };
 
     public int maxVegetables = 10;
     public int maxMeat = 10;
@@ -27,7 +29,7 @@ public class Storehouse : MonoBehaviour {
     public int meat = 0;
     public int water = 0;
 
-    //Building Resources
+        //Building Resources
     public int wood = 0;
     public int nails = 0;
     //TODO complete
@@ -62,33 +64,27 @@ public class Storehouse : MonoBehaviour {
                         //TODO loop to add based on quantity, return remainder;
                         return remainder;
                     }
-                    break;
                 }
             case Resource.MEAT:
                 {
                     return 0;
-                    break;
                 }
             case Resource.WATER:
                 {
                     return 0;
-                    break;
                 }
             case Resource.WOOD:
                 {
                     return 0;
-                    break;
                 }
             case Resource.NAILS:
                 {
                     return 0;
-                    break;
                 }
             default:
                 {
                     Debug.Log("Unkown Resource, case switch potentially incomplete.");
                     return 0;
-                    break;
                 }
         }
     }
