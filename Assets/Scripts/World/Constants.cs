@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public class Constants
+{
+
+}
+
 public enum BuildingPublicness
 {
     PUBLIC = 0,

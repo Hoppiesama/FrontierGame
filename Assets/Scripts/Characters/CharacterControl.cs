@@ -27,7 +27,14 @@ public class CharacterControl : MonoBehaviour {
 		
         if (state == CharacterState.GOING_HOME)
         {
-            transform.position = Vector3.MoveTowards(transform.position, stats.home.transform.GetChild(0).transform.position, walkSpeed * Time.deltaTime);
+            if (stats.home != null)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, stats.home.transform.position, walkSpeed * Time.deltaTime);
+            }
+            else
+            {
+                state = CharacterState.RESTING;
+            }
         }
 	}
 

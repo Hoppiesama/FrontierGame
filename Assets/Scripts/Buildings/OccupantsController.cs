@@ -36,7 +36,7 @@ public class OccupantsController : MonoBehaviour {
             {
                 //Join the fun
                 occupants.Add(characterGameObject);
-                
+                DisableCharacter(characterGameObject);
                 return true;
             }
             //Or there's not enough room at the inn.
@@ -46,6 +46,7 @@ public class OccupantsController : MonoBehaviour {
         {
             //It's a private building, you must own it to go in. (Checked elsewhere).
             occupants.Add(characterGameObject);
+            DisableCharacter(characterGameObject);
             return true;
         }
     }
@@ -53,16 +54,17 @@ public class OccupantsController : MonoBehaviour {
     public void ExitBuilding(GameObject characterGameObject)
     {
         occupants.Remove(characterGameObject);
+        EnableCharacter(characterGameObject);
     }
 
 
-    private void disableCharacter(GameObject character)
+    private void DisableCharacter(GameObject character)
     {
         character.GetComponent<CharacterController>().enabled = false;
         character.GetComponent<MeshRenderer>().enabled = false;
     }
 
-    private void enableCharacter(GameObject character)
+    private void EnableCharacter(GameObject character)
     {
         character.GetComponent<CharacterController>().enabled = true;
         character.GetComponent<MeshRenderer>().enabled = true;

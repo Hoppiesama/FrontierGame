@@ -19,11 +19,11 @@ public class EnterBuilding : MonoBehaviour {
         Debug.Log("Triggered Home");
         if (col.gameObject.tag == "Character")
         {
-            if (col.gameObject.GetComponent<CharacterStats>().home == transform.parent.gameObject)
+            if (col.gameObject.GetComponent<CharacterStats>().home == this.gameObject)
             {
                 //Resident lives here
                 Debug.Log("Resident lives here, going inside");
-                transform.parent.gameObject.GetComponent<OccupantsController>().EnterBuilding(col.gameObject);
+                GetComponent<OccupantsController>().EnterBuilding(col.gameObject);
             }
         }
     }
