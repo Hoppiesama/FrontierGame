@@ -100,7 +100,7 @@ public class MouseController : MonoBehaviour {
 
             if (Physics.Raycast(ray, out hit, 1000.0f, LayerMask.GetMask("Floor"), QueryTriggerInteraction.Ignore))
             {
-                placingObject.transform.position = new Vector3(hit.point.x, hit.point.y + placingObject.GetComponent<MeshCollider>().bounds.extents.y, hit.point.z);
+                placingObject.transform.position = new Vector3(Mathf.Round(hit.point.x), hit.point.y + placingObject.GetComponent<MeshCollider>().bounds.extents.y, Mathf.Round(hit.point.z));
                 placePos = placingObject.transform.position;
             }
 
